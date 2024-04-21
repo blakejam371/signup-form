@@ -135,6 +135,10 @@ input {
   margin-bottom: 10px;
 }
 
+#pass-match {
+  font-size: 0.7rem;
+}
+
 button {
   border: none;
   border-radius: 1em;
@@ -145,6 +149,10 @@ button {
   background-color: var(--accent-clr);
   padding: 10px 20px;
   margin: 20px 0 0 0;
+}
+
+button:disabled {
+  background-color: grey;
 }
 
 #button-container {

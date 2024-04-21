@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,600,800');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff: 'Fira Sans', sans-serif;
+  
+  --fw-n: 300;
+  --fw-m: 600;
+  --fw-b: 800;
+  
+  --fs-1: 6.5rem;
+  --fs-2: 5rem;
+  --fs-3: 3.5rem;
+  --fs-4: 2rem;
+  --fs-p: 1rem;
+  
+  --primary-clr: #225560;
+  --secondary-clr: #36213E;
+  --secondary-clr-light: #554971;
+  --accent-clr: #EF6461;
+}
+
+body { 
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff);
+}

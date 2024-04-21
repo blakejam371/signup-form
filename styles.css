@@ -15,10 +15,11 @@
   --fs-2: 5rem;
   --fs-3: 3.5rem;
   --fs-4: 2rem;
+  --fs-5: 1.5rem;
   --fs-p: 1rem;
   
   --primary-clr: #225560;
-  --secondary-clr: #36213E;
+  --secondary-clr: #2d798a;
   --secondary-clr-light: #554971;
   --accent-clr: #EF6461;
 }
@@ -26,7 +27,93 @@
 body { 
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: var(--ff);
+}
+
+#container {
+  display: flex;
+}
+
+#left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vh;
+  background-image: url(https://cdn.pixabay.com/photo/2017/08/01/18/42/people-2567264_1280.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:-20vh;
+}
+
+#right-side {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--primary-clr);
+  color: white;
+}
+
+#rubix-header {
+  background-color: rgba(123, 107, 107, 0.25);
+}
+
+#rubix-header-text {
+  font-size: var(--fs-3);
+  text-align: center;
+  margin: 0;
+  color: var(--accent-clr)
+}
+
+#hero-section {
+  display: flex;
+  align-items: center;
+  height: 30vh;
+  background-color: var(--secondary-clr);
+  color: white;
+}
+
+#hero-section-text {
+  font-size: var(--fs-4);
+  text-align: center;
+}
+
+#form-section {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+}
+
+#form-header {
+  font-size: var(--fs-5);
+  text-align: center;
+}
+
+#footer-section {
+  height: 30vh;
+  background-color: var(--secondary-clr);
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-rows {
+  display: flex;
+}
+
+button {
+  margin: 20px;
+  border: none;
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
 }

@@ -3,6 +3,7 @@ const passConf = document.querySelector('#passconf');
 const passRules = document.querySelector('#pass-rules');
 const passMatch = document.querySelector('#pass-match');
 const btn = document.querySelector('#submit');
+const form = document.querySelector('form');
 
 passConf.addEventListener("input", () => {
   if (passConf.value !== pass.value) {
@@ -18,9 +19,20 @@ passConf.addEventListener("input", () => {
   };
 });
 
+function checkPassword(str) {
+  let passRegex = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
+  return passRegex.test(str);
+};
 
-// `Password must have:
-//   - One uppercase character
-//   - One lowercase character
-//   - One number or special character
-//   - Minimum eight characters`;
+form.addEventListener("submit", (event) => {
+  if (!checkPassword(pass.value)) {
+    alert(`Password must have:
+    - One uppercase character
+    - One lowercase character
+    - One number or special character
+    - Minimum eight characters`);
+    event.preventDefault();
+    return;
+  }
+});
+

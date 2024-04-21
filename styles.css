@@ -22,6 +22,7 @@
   --secondary-clr: #548CA8;
   --secondary-clr-light: #6fb9df;
   --accent-clr: #EF6461;
+  --accent-clr-dark:#b74a48;
   --opaque-background: rgba(123, 107, 107, 0.25);
 }
 
@@ -151,6 +152,14 @@ button {
   margin: 20px 0 0 0;
 }
 
+button:hover {
+  cursor:pointer
+}
+
+button:focus {
+  background-color: var(--accent-clr-dark);
+}
+
 button:disabled {
   background-color: grey;
 }
@@ -172,7 +181,7 @@ input:valid {
 }
 
 input:invalid {
-  border: 2px solid var(--accent-clr);
+  border: 2px solid var(--accent-clr-dark);
 }
 
 @media only screen and (max-width: 650px) {

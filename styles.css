@@ -18,16 +18,18 @@
   --fs-5: 1.5rem;
   --fs-p: 1rem;
   
-  --primary-clr: #225560;
-  --secondary-clr: #2d798a;
-  --secondary-clr-light: #554971;
+  --primary-clr: #307989;
+  --secondary-clr: #548CA8;
+  --secondary-clr-light: #6fb9df;
   --accent-clr: #EF6461;
+  --opaque-background: rgba(123, 107, 107, 0.25);
 }
 
 body { 
   height: 100vh;
   display: flex;
   font-family: var(--ff);
+  font-weight: var(--fw-n);
 }
 
 #container {
@@ -54,7 +56,7 @@ body {
 }
 
 #rubix-header {
-  background-color: rgba(123, 107, 107, 0.25);
+  background-color: var(--opaque-background);
 }
 
 #rubix-header-text {
@@ -64,11 +66,25 @@ body {
   color: var(--accent-clr)
 }
 
+#photo-credit {
+  background-color: var(--opaque-background);
+  font-size: 0.8rem;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 #hero-section {
   display: flex;
   align-items: center;
   height: 30vh;
-  background-color: var(--secondary-clr);
+  background: linear-gradient(to bottom, var(--secondary-clr-light), var(--secondary-clr));
   color: white;
 }
 
@@ -90,7 +106,7 @@ body {
 
 #footer-section {
   height: 30vh;
-  background-color: var(--secondary-clr);
+  background: linear-gradient(to bottom, var(--secondary-clr), var(--secondary-clr-light));
 }
 
 #form {
@@ -100,11 +116,23 @@ body {
 
 .form-rows {
   display: flex;
+  justify-content: center;
+}
+
+input {
+  margin-bottom: 10px;
 }
 
 button {
-  margin: 20px;
   border: none;
+  border-radius: 1em;
+  font-family: var(--ff);
+  font-size: var(--fs-p);
+  font-weight: var(--fw-m);
+  color: white;
+  background-color: var(--accent-clr);
+  padding: 10px 20px;
+  margin: 20px 0 0 0;
 }
 
 #button-container {
@@ -116,4 +144,5 @@ button {
 .form-item {
   display: flex;
   flex-direction: column;
+  margin-right: 10px;
 }

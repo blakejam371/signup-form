@@ -13,6 +13,7 @@ passConf.addEventListener("input", () => {
   } 
   else {
     btn.removeAttribute('disabled');
+    passMatch.style.color = 'white';
     return passMatch.textContent = 'Passwords match';
   };
 });
